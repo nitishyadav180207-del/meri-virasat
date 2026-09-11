@@ -42,12 +42,12 @@ app.add_middleware(
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
-app.include_router(auth.router)
-app.include_router(heritage.router)
-app.include_router(ai.router)
-app.include_router(verification.router)
-app.include_router(dashboard.router)
-app.include_router(geocode.router)
+app.include_router(auth.router, prefix="/api")
+app.include_router(heritage.router, prefix="/api")
+app.include_router(ai.router, prefix="/api")
+app.include_router(verification.router, prefix="/api")
+app.include_router(dashboard.router, prefix="/api")
+app.include_router(geocode.router, prefix="/api")
 
 
 @app.on_event("startup")
