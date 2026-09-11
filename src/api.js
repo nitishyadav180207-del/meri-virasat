@@ -2,7 +2,7 @@
 // Central place for all backend calls. Change API_BASE via .env
 // (VITE_API_BASE_URL) if the backend runs somewhere other than localhost:8000.
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 const AUTH_TOKEN_KEY = "meriVirasat.token";
 
 export function getAuthToken() {
