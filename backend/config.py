@@ -13,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./heritage.db")
 
 # --- file storage ---
-UPLOAD_DIR = os.environ.get("UPLOAD_DIR", os.path.join(BASE_DIR, "uploads"))
+UPLOAD_DIR = os.environ.get("UPLOAD_DIR", "/tmp/uploads")
 
 # --- CORS ---
 # "*" is fine for local hackathon development; restrict this to the deployed
