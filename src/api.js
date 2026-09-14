@@ -85,7 +85,7 @@ export const Api = {
 
   searchLocation: (query) => request(`/geocode/search?q=${encodeURIComponent(query)}`),
 
-  mediaUrl: (path) => `${API_BASE}${path}`,
+  mediaUrl: (path) => {`r`n    if (!path) return "";`r`n    const backendBase = API_BASE.replace(/\/api\/?$/, "");`r`n    return `${backendBase}${path}`;`r`n  },
 };
 
 // Category options shared between the Add Heritage form and the Discover
@@ -159,3 +159,4 @@ export function mapRecord(r) {
     practiceFrequency: r.practice_frequency,
   };
 }
+
