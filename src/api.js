@@ -85,7 +85,11 @@ export const Api = {
 
   searchLocation: (query) => request(`/geocode/search?q=${encodeURIComponent(query)}`),
 
-  mediaUrl: (path) => {`r`n    if (!path) return "";`r`n    const backendBase = API_BASE.replace(/\/api\/?$/, "");`r`n    return `${backendBase}${path}`;`r`n  },
+  mediaUrl: (path) => {
+    if (!path) return "";
+    const backendBase = API_BASE.replace(/\/api\/?$/, "");
+    return `${backendBase}${path}`;
+},
 };
 
 // Category options shared between the Add Heritage form and the Discover
